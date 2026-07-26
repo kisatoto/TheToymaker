@@ -61,6 +61,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="TheToymaker\animations\characters\" />
         <Folder Include="TheToymaker\images\card_portraits\big\"/>
         <Folder Include="TheToymaker\images\powers\big\"/>
         <Folder Include="TheToymaker\images\relics\big\"/>

@@ -1,3 +1,17 @@
 {
+  "THETOYMAKER-THE_TOYMAKER.aromaPrinciple": "Lore",
+  "THETOYMAKER-THE_TOYMAKER.banter.alive.endTurnPing": "Co-op hurry up end turn ping message",
+  "THETOYMAKER-THE_TOYMAKER.banter.dead.endTurnPing": "...",
+  "THETOYMAKER-THE_TOYMAKER.cardsModifierDescription": "__ cards will now appear in rewards and shops.",
+  "THETOYMAKER-THE_TOYMAKER.cardsModifierTitle": "__ Cards",
+  "THETOYMAKER-THE_TOYMAKER.description": "Character Selection\nScreen Description",
+  "THETOYMAKER-THE_TOYMAKER.eventDeathPrevention": "Co-op survival line",
+  "THETOYMAKER-THE_TOYMAKER.goldMonologue": "Line spoken when obtaining a large amount of gold",
+  "THETOYMAKER-THE_TOYMAKER.possessiveAdjective": "his/her/its",
+  "THETOYMAKER-THE_TOYMAKER.pronounObject": "him/her/it",
+  "THETOYMAKER-THE_TOYMAKER.pronounPossessive": "his/hers/its",
+  "THETOYMAKER-THE_TOYMAKER.pronounSubject": "he/she/it",
+  "THETOYMAKER-THE_TOYMAKER.title": "The Toymaker",
+  "THETOYMAKER-THE_TOYMAKER.titleObject": "The Toymaker"
   
 }

@@ -6,11 +6,14 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using TheToymaker.TheToymakerCode.Cards;
 
 namespace TheToymaker.TheToymakerCode.Character;
 
 public class TheToymaker : PlaceholderCharacterModel
 {
+    public override string PlaceholderID => "regent";
+    
     public const string CharacterId = "TheToymaker";
 
     public static readonly Color Color = new("ffffff");
@@ -21,16 +24,10 @@ public class TheToymaker : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<StrikeKnight>(),
+        ModelDb.Card<StrikeKnight>(),
+        ModelDb.Card<StrikeKnight>(),
+        ModelDb.Card<StrikeKnight>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
