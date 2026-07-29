@@ -28,6 +28,10 @@ public class TheToymaker : PlaceholderCharacterModel
         ModelDb.Card<StrikeKnight>(),
         ModelDb.Card<StrikeKnight>(),
         ModelDb.Card<StrikeKnight>(),
+        ModelDb.Card<DefendShield>(),
+        ModelDb.Card<DefendShield>(),
+        ModelDb.Card<DefendShield>(),
+        ModelDb.Card<DefendShield>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

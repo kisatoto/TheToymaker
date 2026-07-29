@@ -1,5 +1,8 @@
 {
   "THETOYMAKER-STRIKE_KNIGHT.description": "Summon an AttackBot to attack.",
-  "THETOYMAKER-STRIKE_KNIGHT.title": "Strike"
+  "THETOYMAKER-STRIKE_KNIGHT.title": "Strike",
+
+  "THETOYMAKER-DEFEND_SHIELD.description": "Summons an DenfendBot to defend.",
+  "THETOYMAKER-DEFEND_SHIELD.title": "Defend"
   
 }

@@ -1,4 +1,5 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -10,6 +11,7 @@ using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheToymaker.TheToymakerCode.Cards;
 using TheToymaker.TheToymakerCode.Character;
+using TheToymaker.TheToymakerCode.Powers;
 
 namespace TheToymaker.TheToymakerCode.Cards;
 
@@ -29,14 +31,20 @@ public class StrikeKnight() : TheToymakerCard(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        Creature knight = await PlayerCmd.AddPet<KnightBot>(Owner);
-        NCreature knightNode = NCombatRoom.Instance?.GetCreatureNode(knight);
-        knightNode.ToggleIsInteractable(true); /*reminder to make a function to check for all of your constructs to keep them interactable*/
-        await CreatureCmd.SetMaxHp(knight, 10);
-        await CreatureCmd.Heal(knight, 10);
-        ArgumentNullException.ThrowIfNull(play.Target,"cardPlay.Target");
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        Creature knight = (await MinionCmd.Summon<KnightBot>(Owner, 1)).Creature;
+        PowerModel propPower = await PowerCmd.Apply<DamageBot>(choiceContext, knight, DynamicVars.Damage.BaseValue, Owner.Creature, this);
+        propPower.Target = play.Target;
+        // ArgumentNullException.ThrowIfNull(play.Target,"cardPlay.Target");
+        // AttackCommand attack = DamageCmd.Attack(damage);
+        // CreatureCmd.Damage(choiceContext, play.Target, DynamicVars.Damage, this, play);
+
+        // MinionAttack.
+
+
+        // AttackCommand(DynamicVars.Damage.BaseValue) (knight, this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
+    
+    
 
     protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(3M);
 }

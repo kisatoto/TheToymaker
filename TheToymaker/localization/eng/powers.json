@@ -1,3 +1,11 @@
 {
+  "THETOYMAKER-CONSTRUCT_POWER.description": "",
+  "THETOYMAKER-CONSTRUCT_POWER.smartDescription": "",
+  "THETOYMAKER-CONSTRUCT_POWER.title": "Contruct",
+
+
+  "THETOYMAKER-DAMAGE_BOT.description": "This Guy deals damage at end of turn.",
+  "THETOYMAKER-DAMAGE_BOT.smartDescription": "This Guy Deals Damage at end of turn.",
+  "THETOYMAKER-DAMAGE_BOT.title": "DamageBot"
   
 }
